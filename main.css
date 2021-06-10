@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    margin-top: 80px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #000a;
+    text-decoration: none;
+
+    font-size: 1.2rem;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 100vw;
+
+    border-bottom: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+
+    z-index: 10;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+
+    margin-right: 20px;
+}
+
+header ul li {
+    margin: 0 10px;
+    padding: 5px 20px;
+}
+
+header img {
+    position: fixed;
+    right: 30px;
+    top: 20px;
+
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 2px;
+    width: 100px;
+
+    transition: transform .9s, right .9s, top .9s;
+}
+
+header img:hover {
+    transform: scale(3);
+    right: 90px;
+    top: 60px;
+}
+
+.currentNav {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.currentNav a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: .5px .5px white;
+}
+
+.bottomNav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+.bottomNav div {
+    display: flex;
+    align-items: center;
+}
+
+.bottomNav div i {
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 5px solid black;
+
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+}
+
+.bottomNav a {
+    color: black;
+    transition: transform .4s;
+}
+
+.bottomNav a:hover {
+    transform: scale(1.5) rotateZ(360deg);
+    color: #0e8994;
+}
+
+.bottomNav a:hover i {
+    border: 5px solid #0e8994;
+}
+
+@media (max-width: 800px) {
+    header {
+        justify-content: flex-start;
+    }
+
+    header ul li {
+        padding: 5px;
+        margin: 0 5px;
+    }
+
+    header ul li a {
+        font-size: .8rem;
+    }
+
+    header img {
+        top: 55px;
+        right: 10px;
+    }
+
+    .currentNav a {
+        font-size: 1rem;
+    }
+
+    .bottomNav {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 5px;
+    }
+}

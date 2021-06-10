@@ -1,0 +1,130 @@
+body {
+    background-image: url("../images/nature.jpg");
+}
+
+.allContentsContainer {
+    padding-top: 50px;
+    padding-left: 80px;
+}
+
+.contentContainer {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.textContentContainer {
+    border: 1px solid black;
+    width: 600px;
+
+    margin-right: 5px;
+    padding: 5px 15px;
+
+    background-color: #fffa;
+}
+
+.textContentContainer h1 {
+    color: black;
+}
+
+.textContentContainer p {
+    text-align: justify;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+
+    text-indent: 10px;
+}
+
+.textContentContainer a {
+    color: #0e8994;
+    text-decoration: underline;
+}
+
+.textContentContainer a:hover {
+    color: blue;
+}
+
+.galleryContentContainer {
+    border: 2px solid black;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+}
+
+.galleryContentContainer:hover .gallery {
+    display: flex;
+}
+
+.gallery {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 10vh 10vw;
+    width: 80vw;
+    height: calc(100vh - 40px);
+    height: 80vh;
+
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: #fffa;
+
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.gallery img {
+    height: 250px;
+    margin: 20px;
+
+    border-radius: 20px;
+    border: 2px solid #0e8994;
+
+    transition: transform 1s;
+}
+
+.gallery img:hover {
+    transform: scale(2);
+    z-index: 3;
+}
+
+@media (max-width: 800px) {
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery img {
+        height: 150px;
+        margin: 2px;
+    }
+
+    .allContentsContainer {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 5px;
+        margin-right: 0;
+    }
+
+    .contentContainer {
+        flex-direction: column-reverse;
+    }
+
+    .textContentContainer {
+        margin-top: 5px;
+        width: 90vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .gallery img {
+        height: 100px;
+    }
+}

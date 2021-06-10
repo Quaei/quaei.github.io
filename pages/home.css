@@ -1,0 +1,81 @@
+body {
+    /*background-color: #ffff0055;*/
+    background-image: url("../images/nature.jpg");
+}
+
+.welcome {
+    padding-top: 20px;
+}
+
+.allContentsContainer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 50px;
+    transition: font-size .9s;
+}
+
+.contentContainer p {
+    z-index: 1;
+}
+
+.contentContainer:hover {
+    color: white;
+    text-shadow: 1px 1px black;
+    font-size: 2rem;
+}
+
+.imgContainer {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+
+    margin-bottom: 10px;
+
+    opacity: 0.2;
+    transition: transform .9s;
+}
+
+.imgContainer:hover {
+    transform: scale(5);
+
+    background-size: cover;
+
+    opacity: 1;
+}
+
+#imgaboutme {
+    background-image: url("../images/flowers.jpg");
+}
+
+#imgfreetime {
+    background-image: url("../images/guitar.jpg");
+}
+
+#imgprojects {
+    background-image: url("../images/code.jpg");
+}
+
+#imgthingsilove {
+    background-image: url("../images/stars.jpg");
+}
+
+@media (max-width: 800px) {
+    body {
+        background-size: 350vw;
+    }
+
+    .welcome {
+        padding-top: 50px;
+    }
+}
